@@ -80,7 +80,7 @@ curl -v -X DELETE "http://localhost:8080/api/health-checks/<YOUR_ID_HERE>"
  Steps to Run
 1. **Clone the repository**
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/jxshnu/KAIBURR-TASK-1-Java-REST-API-MongoDB-Backend
    cd it-ops-health-check-api
    ```
 
