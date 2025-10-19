@@ -47,8 +47,12 @@ curl "http://localhost:8080/api/health-checks/<YOUR_ID_HERE>"
 
 ![Get Result](results/get-result.png)
 
+3. Database Proof: Document Created
 
- 3. Demonstrate Security Validation
+After the API call, we refresh MongoDB Compass. The itopsdb database and health_checks collection have been automatically created, and the new document is now visible.
+![Security Validation](results/mongodb1.png)
+
+4. Demonstrate Security Validation
 **Request:**
 ```bash
 curl -v -X PUT "http://localhost:8080/api/health-checks"   -H "Content-Type: application/json"   -d '{ "name": "Malicious Command", "owner": "hacker", "command": "echo hello; rm -rf /" }'
@@ -59,7 +63,7 @@ curl -v -X PUT "http://localhost:8080/api/health-checks"   -H "Content-Type: app
 
 
 
- 4. Delete a Task
+ 5. Delete a Task
 **Request:**
 ```bash
 curl -v -X DELETE "http://localhost:8080/api/health-checks/<YOUR_ID_HERE>"
@@ -68,8 +72,10 @@ curl -v -X DELETE "http://localhost:8080/api/health-checks/<YOUR_ID_HERE>"
 **Result Screenshot:**
 ![Delete Result](results/delete-result.png)
 
+6. Database Proof: Document Deleted
 
-
+Finally, we refresh MongoDB Compass one last time. The document has been successfully removed from the collection, confirming the DELETE operation was successful.
+![Security Validation](results/mongodb2.png)
  Local Setup & Running Instructions
 
  Prerequisites
